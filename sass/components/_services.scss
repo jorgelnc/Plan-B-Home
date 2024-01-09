@@ -1,6 +1,5 @@
 .services__section {
     padding-top: 30px;
-
 }
 
 .services__container {
@@ -9,12 +8,12 @@
     align-items: center;
     justify-content: space-between;
 
-    .services__buttons-list {
-    display: flex;
-    justify-content: space-evenly;
-    gap: 8px;
-    margin-bottom: 34px;
-    } 
+    // .services__buttons-list {
+    // display: flex;
+    // justify-content: space-evenly;
+    // gap: 8px;
+    // margin-bottom: 34px;
+    // } 
 
     .services__title {
         display: flex;
@@ -31,12 +30,6 @@
     }
 }
 
-
-.services__button--current{
-    background-color: $color-main;
-    color: $color-text-light;
-}
-
 .services__cards-list {
     display: flex;
     flex-wrap: wrap;
@@ -50,7 +43,8 @@
     border-style: none;
     border-radius: 10px;
     margin-top: 20px;
-    background-color: transparent;
+// background: rgb(214, 187, 84);
+    // background: linear-gradient(90deg, rgba(214, 187, 84, 1) 0%, rgba(239, 244, 178, 1) 26%, rgba(214, 187, 84, 1) 49%, rgba(239, 244, 178, 1) 72%, rgba(214, 187, 84, 1) 100%);
     box-shadow: 0px 1px 4px $color-secondary;
     transition: box-shadow 250ms $cubic, transform 250ms $cubic;
     flex-basis: calc((100% - 60px) / 3);
@@ -62,6 +56,7 @@
     border-style: none;
     box-shadow: 2px 2px 4px $color-secondary;
     cursor: pointer;
+    transform: scale(1.05);
     }
 
     &:hover .services__overlay-block {
@@ -77,7 +72,7 @@
     .services__overlay-block {
     width: 370px;
     height: 370px;
-    background-color: rgba(248, 248, 247, 0.85);
+    background-color: rgba(248, 248, 247, 1);
     position: absolute;
     top: 0;
     color: black;
@@ -91,6 +86,7 @@
     transition: transform 250ms $cubic;
     font-family: inherit;
     font-size: 14px;
+    font-weight: 700;
 }
 }
 
@@ -99,21 +95,27 @@
     justify-content: center;
     align-items: center;
     padding: 20px;
+    
    
     .services__cards-title {
     text-align: center;
     font-family: inherit;
-    margin-bottom: 4px;
     font-style: normal;
     font-weight: 700;
-    font-size: 18px;
-    letter-spacing: 0.06em;
+    font-size: 40px;
+    color: white;
+    width: 350px;
+    height: 450px;
+    text-shadow: 1px 1px 20px black;
+    position: absolute;
     }
 }
 
 .services__cards-img {
-   height: 270px;
+   height: 100%;
+   min-height: 300px;
    border-radius: 10px;
+filter: brightness(0.6);
 }
 
 @media screen and (max-width: 767px) {

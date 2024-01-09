@@ -1,0 +1,104 @@
+.whoarewe {
+    padding-top: 0;
+
+    .whoarewe__list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 60px;
+
+        .whoarewe__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../../images/backservicestitle.png);
+    background-position: center;
+    background-size: contain;
+    width: 100%;
+    height: 150px;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 40px;
+        }
+    }
+
+}
+
+.whoarewe__aboutme {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+
+.whoarewe__img-mb {
+    background-color: $color-main;
+    border-radius: 50%;
+    transition: all ease-in-out 1000ms;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.whoarewe__aboutme-item {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    text-align: justify;
+    gap: 10px;
+
+    .whoarewe__aboutme-title {
+font-weight: 500;
+font-size: 20px;
+text-align: center;
+color: $color-main;
+text-shadow: 1px 1px 1px black;
+    }
+
+}
+
+}
+
+.whoarewe__mv {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+text-align: center;
+
+.whoarewe__mv-item {
+    display: flex;
+    // justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    border-style: none;
+    box-shadow: 2px 2px 10px $color-main;
+    padding: 50px;
+    gap: 30px;
+    flex-basis: calc((100% - 100px) / 3);
+    width: 500px;
+    height: 385px;
+    background-color: rgb(253, 252, 249);
+    border-radius: 24px;
+    transition: background-color 250ms ease-in-out,
+    box-shadow 250ms ease-in-out;
+
+
+        .whoarewe__m-title{
+            text-align: center;
+        }
+                .whoarewe__v-title {
+                    text-align: center;
+                }
+}
+
+}
+
+.whoarewe__mision {
+    
+}
+
+.whoarewe__vision {
+
+}

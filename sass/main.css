@@ -243,27 +243,33 @@ input {
   margin: 0 auto;
 }
 .hero__main .hero__item .hero__title .hero__button {
-  background-color: rgb(233, 180, 0);
-  margin-top: 30px;
+  background: rgb(204, 173, 17);
+  background: linear-gradient(90deg, rgb(204, 173, 17) 0%, rgb(239, 244, 178) 26%, rgb(204, 173, 17) 49%, rgb(239, 244, 178) 72%, rgb(204, 173, 17) 100%);
+  border-radius: 28px;
+  box-shadow: 0px 1px 3px #666666;
+  font-family: sans-serif;
+  color: black;
+  font-size: 19px;
   font-weight: 700;
-  font-size: 16px;
-  line-height: 1.8;
-  letter-spacing: 0.06em;
-  font-family: inherit;
-  color: #FFFFFF;
-  border-radius: 4px;
+  padding: 10px;
   border-style: none;
-  cursor: pointer;
-  box-shadow: 1px 1px 2px 1px #000000;
-  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+  width: 190px;
+  text-align: center;
   position: relative;
-  width: 300px;
-  height: 50px;
-  padding-right: 20px;
+  margin-top: 30px;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero__main .hero__item .hero__title .hero__button:hover, .hero__main .hero__item .hero__title .hero__button:focus {
   box-shadow: 0px 2px 4px #757575;
-  color: black;
+  color: rgb(245, 27, 8);
+  text-shadow: 2px 2px 3px rgb(249, 249, 245);
+  cursor: pointer;
+}
+.hero__main .hero__item .hero__title .hero__button .hero__button-click {
+  position: absolute;
+  width: 50px;
+  right: 0;
 }
 
 .advantages .advantages__container .advantages__list {
@@ -1292,12 +1298,6 @@ input {
   align-items: center;
   justify-content: space-between;
 }
-.services__container .services__buttons-list {
-  display: flex;
-  justify-content: space-evenly;
-  gap: 8px;
-  margin-bottom: 34px;
-}
 .services__container .services__title {
   display: flex;
   justify-content: center;
@@ -1310,11 +1310,6 @@ input {
   font-size: 36px;
   text-align: center;
   margin-bottom: 40px;
-}
-
-.services__button--current {
-  background-color: rgb(233, 180, 0);
-  color: #FFFFFF;
 }
 
 .services__cards-list {
@@ -1330,7 +1325,6 @@ input {
   border-style: none;
   border-radius: 10px;
   margin-top: 20px;
-  background-color: transparent;
   box-shadow: 0px 1px 4px #757575;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   flex-basis: calc((100% - 60px) / 3);
@@ -1342,6 +1336,7 @@ input {
   border-style: none;
   box-shadow: 2px 2px 4px #757575;
   cursor: pointer;
+  transform: scale(1.05);
 }
 .services__cards-list .services__cards-item:hover .services__overlay-block {
   transform: translateY(0);
@@ -1354,7 +1349,7 @@ input {
 .services__overlay .services__overlay-block {
   width: 370px;
   height: 370px;
-  background-color: rgba(248, 248, 247, 0.85);
+  background-color: rgb(248, 248, 247);
   position: absolute;
   top: 0;
   color: black;
@@ -1368,6 +1363,7 @@ input {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   font-family: inherit;
   font-size: 14px;
+  font-weight: 700;
 }
 
 .services__cards-content {
@@ -1379,16 +1375,21 @@ input {
 .services__cards-content .services__cards-title {
   text-align: center;
   font-family: inherit;
-  margin-bottom: 4px;
   font-style: normal;
   font-weight: 700;
-  font-size: 18px;
-  letter-spacing: 0.06em;
+  font-size: 40px;
+  color: white;
+  width: 350px;
+  height: 450px;
+  text-shadow: 1px 1px 20px black;
+  position: absolute;
 }
 
 .services__cards-img {
-  height: 270px;
+  height: 100%;
+  min-height: 300px;
   border-radius: 10px;
+  filter: brightness(0.6);
 }
 
 @media screen and (max-width: 767px) {
@@ -1427,4 +1428,154 @@ input {
     width: 100%;
     height: 100%;
   }
+}
+.whoarewe {
+  padding-top: 0;
+}
+.whoarewe .whoarewe__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+.whoarewe .whoarewe__list .whoarewe__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../../images/backservicestitle.png);
+  background-position: center;
+  background-size: contain;
+  width: 100%;
+  height: 150px;
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.whoarewe__aboutme {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.whoarewe__aboutme .whoarewe__img-mb {
+  background-color: rgb(233, 180, 0);
+  border-radius: 50%;
+  transition: all ease-in-out 1000ms;
+}
+.whoarewe__aboutme .whoarewe__img-mb:hover {
+  transform: scale(1.1);
+}
+.whoarewe__aboutme .whoarewe__aboutme-item {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  text-align: justify;
+  gap: 10px;
+}
+.whoarewe__aboutme .whoarewe__aboutme-item .whoarewe__aboutme-title {
+  font-weight: 500;
+  font-size: 20px;
+  text-align: center;
+  color: rgb(233, 180, 0);
+  text-shadow: 1px 1px 1px black;
+}
+
+.whoarewe__mv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+}
+.whoarewe__mv .whoarewe__mv-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+  border-style: none;
+  box-shadow: 2px 2px 10px rgb(233, 180, 0);
+  padding: 50px;
+  gap: 30px;
+  flex-basis: calc((100% - 100px) / 3);
+  width: 500px;
+  height: 385px;
+  background-color: rgb(253, 252, 249);
+  border-radius: 24px;
+  transition: background-color 250ms ease-in-out, box-shadow 250ms ease-in-out;
+}
+.whoarewe__mv .whoarewe__mv-item .whoarewe__m-title {
+  text-align: center;
+}
+.whoarewe__mv .whoarewe__mv-item .whoarewe__v-title {
+  text-align: center;
+}
+
+.information__casos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(233, 180, 0);
+  height: 300px;
+}
+.information__casos .information__casos-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 100px;
+}
+.information__casos .information__casos-list .information__casos-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.information__casos .information__casos-list .information__casos-item h2 {
+  font-size: 100px;
+  transition: all ease-out 1000ms;
+  text-shadow: 1px 1px 20px white;
+}
+.information__casos .information__casos-list .information__casos-item h2:hover {
+  transform: rotate(360deg);
+}
+.information__casos .information__casos-list .information__casos-item h3 {
+  font-size: 30px;
+  width: 250px;
+}
+
+.information__firma {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(244, 239, 239);
+  height: 300px;
+}
+.information__firma .information__firma-contain img {
+  width: 500px;
+}
+
+.information__tcn {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(233, 180, 0);
+  height: 550px;
+}
+.information__tcn .information__tcn-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 100px;
+}
+.information__tcn .information__tcn-list .information__tcn-item {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  height: 450px;
+  width: 350px;
+  background-color: black;
+  border-radius: 20px;
+  border-style: none;
+  color: white;
 }/*# sourceMappingURL=main.css.map */

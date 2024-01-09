@@ -1,0 +1,86 @@
+.information {
+
+}
+
+.information__casos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-main;
+    height: 300px;
+
+    .information__casos-list {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 100px;
+
+        .information__casos-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+
+            h2 {
+                font-size: 100px;
+                transition: all ease-out 1000ms;
+                text-shadow: 1px 1px 20px white;
+
+                &:hover {
+                    transform: rotate(360deg);
+                }
+            }
+
+            h3 {
+                font-size: 30px;
+                width: 250px;
+            }
+        }
+
+    }
+}
+
+.information__firma{
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: rgb(244, 239, 239);
+height: 300px;
+
+.information__firma-contain {
+
+    img {
+        width: 500px;
+    }
+}
+
+}
+
+.information__tcn {
+    display: flex;
+    justify-content: center;
+background-color: $color-main;
+height: 550px;
+
+.information__tcn-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 100px;
+
+.information__tcn-item {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    height: 450px;
+    width: 350px;
+    background-color: black;
+    border-radius: 20px;
+    border-style: none;
+    color: white;
+    }
+}
+
+}

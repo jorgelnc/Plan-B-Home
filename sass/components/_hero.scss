@@ -37,29 +37,53 @@ height: 600px;
   margin: 0 auto;
 
   .hero__button {
-      background-color: $color-main;
-      margin-top: 30px;
+background: rgb(204, 173, 17);
+  background: linear-gradient(90deg, rgba(204, 173, 17, 1) 0%, rgba(239, 244, 178, 1) 26%, rgba(204, 173, 17, 1) 49%, rgba(239, 244, 178, 1) 72%, rgba(204, 173, 17, 1) 100%);
+      border-radius: 28px;
+      box-shadow: 0px 1px 3px #666666;
+      font-family: sans-serif;
+      color: black;
+      font-size: 19px;
       font-weight: 700;
-      font-size: 16px;
-      line-height: 1.8;
-      letter-spacing: 0.06em;
-      font-family: inherit;
-      color: #FFFFFF;
-      border-radius: 4px;
+      padding: 10px;
       border-style: none;
-      cursor: pointer;
-      box-shadow: 1px 1px 2px 1px $color-text-main;
-      transition: all 250ms $cubic;
+      text-decoration: none;
+      width: 190px;
+      text-align: center;
       position: relative;
-      width: 300px;
-      height: 50px;
-      padding-right: 20px;
+      // background-color: $color-main;
+      margin-top: 30px;
+      // font-weight: 700;
+      // font-size: 16px;
+      // line-height: 1.8;
+      // letter-spacing: 0.06em;
+      // font-family: inherit;
+      // color: #FFFFFF;
+      // border-radius: 50px;
+      // border-style: none;
+      // cursor: pointer;
+      // box-shadow: 1px 1px 2px 1px $color-text-main;
+      transition: all 250ms $cubic;
+      // position: relative;
+      // width: 300px;
+      // height: 50px;
+      // padding-right: 20px;
     
       &:hover,
       &:focus {
         box-shadow: 0px 2px 4px $color-secondary;
-        color: black;
+        color: rgb(245, 27, 8);
+        text-shadow: 2px 2px 3px rgb(249, 249, 245);
+        cursor: pointer;
       }
+
+            .hero__button-click {
+position: absolute;
+width: 50px;
+right: 0;
+
+            }
+
   }
 
 }
