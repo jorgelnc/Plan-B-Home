@@ -24,20 +24,23 @@
 
       .whoarewe__title {
         text-shadow: 1px 1px 2px $color-background-sections;
+        animation: whoareweTitle 5s infinite ease-in-out;
+
+        @keyframes whoareweTitle {
+          0% {
+            transform: scale(1);
+          }
+          50% {
+            transform: scale(1.1);
+          }
+          100% {
+            transform: scale(1);
+          }
+        }
       }
     }
   }
 }
-
-// .background__whoarewe {
-// background-image: url(../../images/background-cover.svg);
-// background-position: center;
-// background-size: cover;
-// background-repeat: no-repeat;
-// filter: opacity(0.2);
-// height: 100vh;
-// position: relative;
-// }
 
 .whoarewe__aboutme {
   display: flex;

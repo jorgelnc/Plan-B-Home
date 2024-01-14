@@ -764,8 +764,39 @@ input {
   text-align: center;
   margin-bottom: 40px;
 }
-.services__section .services__title-container .services__title {
+
+.services__title {
   text-shadow: 1px 1px 2px #2f303a;
+  -webkit-animation: servicesTitle 7s infinite ease-in-out;
+  animation: servicesTitle 7s infinite ease-in-out;
+}
+@-webkit-keyframes servicesTitle {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes servicesTitle {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
 }
 
 .cube {
@@ -1313,6 +1344,36 @@ body .section__services .row {
 }
 .whoarewe .whoarewe__list .whoarewe__title-container .whoarewe__title {
   text-shadow: 1px 1px 2px #2f303a;
+  -webkit-animation: whoareweTitle 5s infinite ease-in-out;
+  animation: whoareweTitle 5s infinite ease-in-out;
+}
+@-webkit-keyframes whoareweTitle {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes whoareweTitle {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
 }
 
 .whoarewe__aboutme {
