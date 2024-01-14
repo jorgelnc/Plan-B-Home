@@ -1,47 +1,61 @@
 .whoarewe {
-    padding-top: 0;
+  padding-top: 0;
+  background-image: url('../../images/background-cover.svg');
+  background-position: center;
+  background-size: cover;
+  padding-bottom: 0;
 
-    .whoarewe__list {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 60px;
-
-        .whoarewe__title {
+  .whoarewe__list {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url(../../images/backservicestitle.png);
-    background-position: center;
-    background-size: contain;
-    width: 100%;
-    height: 150px;
-    font-size: 36px;
-    text-align: center;
-    margin-bottom: 40px;
-        }
-    }
+    gap: 60px;
 
+    .whoarewe__title-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 150px;
+      font-size: 36px;
+      text-align: center;
+      margin-bottom: 40px;
+
+      .whoarewe__title {
+        text-shadow: 1px 1px 2px $color-background-sections;
+      }
+    }
+  }
 }
 
-.whoarewe__aboutme {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
+// .background__whoarewe {
+// background-image: url(../../images/background-cover.svg);
+// background-position: center;
+// background-size: cover;
+// background-repeat: no-repeat;
+// filter: opacity(0.2);
+// height: 100vh;
+// position: relative;
+// }
 
-.whoarewe__img-mb {
+.whoarewe__aboutme {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+
+  .whoarewe__img-mb {
     background-color: $color-main;
     border-radius: 50%;
     transition: all ease-in-out 1000ms;
 
     &:hover {
-        transform: scale(1.1);
+      transform: scale(1.1);
     }
-}
+  }
 
-.whoarewe__aboutme-item {
+  .whoarewe__aboutme-item {
     display: flex;
     flex-direction: column;
     max-width: 500px;
@@ -49,24 +63,22 @@
     gap: 10px;
 
     .whoarewe__aboutme-title {
-font-weight: 500;
-font-size: 20px;
-text-align: center;
-color: $color-main;
-text-shadow: 1px 1px 1px black;
+      font-weight: 500;
+      font-size: 20px;
+      text-align: center;
+      color: $color-main;
+      text-shadow: 1px 1px 1px black;
     }
-
-}
-
+  }
 }
 
 .whoarewe__mv {
-display: flex;
-flex-wrap: wrap;
-justify-content: space-between;
-text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
 
-.whoarewe__mv-item {
+  .whoarewe__mv-item {
     display: flex;
     // justify-content: center;
     flex-direction: column;
@@ -76,29 +88,55 @@ text-align: center;
     box-shadow: 2px 2px 10px $color-main;
     padding: 50px;
     gap: 30px;
-    flex-basis: calc((100% - 100px) / 3);
-    width: 500px;
-    height: 385px;
+    width: 100%;
+    height: 100%;
     background-color: rgb(253, 252, 249);
     border-radius: 24px;
-    transition: background-color 250ms ease-in-out,
-    box-shadow 250ms ease-in-out;
+    transition: background-color 250ms ease-in-out, box-shadow 250ms ease-in-out;
 
-
-        .whoarewe__m-title{
-            text-align: center;
-        }
-                .whoarewe__v-title {
-                    text-align: center;
-                }
-}
-
+    .whoarewe__m-title {
+      text-align: center;
+    }
+    .whoarewe__v-title {
+      text-align: center;
+    }
+  }
 }
 
 .whoarewe__mision {
-    
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
 }
 
 .whoarewe__vision {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+}
 
+.whoarewe__valores {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  gap: 40px;
+
+  .valores__title {
+    text-align: center;
+    font-family: inherit;
+  }
+
+  .valores__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+    width: 1000px;
+    border-radius: 20%;
+    box-shadow: 2px 2px 20px $color-main;
+    background-color: white;
+  }
 }

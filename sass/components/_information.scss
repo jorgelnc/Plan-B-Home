@@ -1,68 +1,81 @@
 .information {
-
+  padding-bottom: 0;
 }
 
-.information__casos{
+.information__casos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-main;
+  height: 300px;
+
+  .information__casos-list {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    background-color: $color-main;
-    height: 300px;
+    gap: 100px;
 
-    .information__casos-list {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        gap: 100px;
+    .information__casos-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
 
-        .information__casos-item {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
+      h2 {
+        font-size: 100px;
+        transition: all ease-out 1000ms;
+        text-shadow: 1px 1px 20px white;
 
-            h2 {
-                font-size: 100px;
-                transition: all ease-out 1000ms;
-                text-shadow: 1px 1px 20px white;
-
-                &:hover {
-                    transform: rotate(360deg);
-                }
-            }
-
-            h3 {
-                font-size: 30px;
-                width: 250px;
-            }
+        &:hover {
+          transform: rotate(360deg);
         }
+      }
 
+      h3 {
+        font-size: 30px;
+        width: 250px;
+      }
     }
+  }
 }
 
-.information__firma{
-display: flex;
-align-items: center;
-justify-content: center;
-background-color: rgb(244, 239, 239);
-height: 300px;
+.num__casos-title {
+  animation: num 7s infinite linear;
+}
 
-.information__firma-contain {
+@keyframes num {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.7);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 
+.information__firma {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(244, 239, 239);
+  height: 300px;
+
+  .information__firma-contain {
     img {
-        width: 500px;
+      width: 500px;
     }
-}
-
+  }
 }
 
 .information__tcn {
-    display: flex;
-    justify-content: center;
-background-color: $color-main;
-height: 550px;
+  display: flex;
+  justify-content: center;
+  background-color: #edcd64;
+  height: 550px;
 
-.information__tcn-list {
+  .information__tcn-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -70,17 +83,160 @@ height: 550px;
     width: 100%;
     gap: 100px;
 
-.information__tcn-item {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-    height: 450px;
-    width: 350px;
-    background-color: black;
-    border-radius: 20px;
-    border-style: none;
-    color: white;
+    .information__tcn-item {
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+      height: 450px;
+      width: 350px;
+      background-color: black;
+      border-radius: 20px;
+      border-style: none;
+      color: white;
     }
+  }
 }
 
+.cardN {
+  display: grid;
+  place-items: center;
+  width: 80vw;
+  color: white;
+  max-width: 21.875rem;
+  height: 28.125rem;
+  overflow: hidden;
+  border-radius: 0.625rem;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
+}
+
+.cardN > * {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.card__background {
+  object-fit: cover;
+  max-width: 100%;
+  height: 100%;
+}
+
+.card__content {
+  --flow-space: 0.9375rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: flex-end;
+  height: 55%;
+  padding: 12% 1.25rem 1.875rem;
+  background: linear-gradient(
+    180deg,
+    hsla(0, 0%, 0%, 0) 0%,
+    hsla(0, 0%, 0%, 0.3) 10%,
+    hsl(0, 0%, 0%) 100%
+  );
+}
+
+.card__content--container {
+  --flow-space: 1.25rem;
+}
+
+.card__title {
+  position: relative;
+  width: fit-content;
+  width: -moz-fit-content; /* Prefijo necesario para Firefox  */
+}
+
+.card__title::after {
+  content: '';
+  position: absolute;
+  height: 0.3125rem;
+  width: calc(100% + 1.25rem);
+  bottom: calc((1.25rem - 0.5rem) * -1);
+  left: -1.25rem;
+  background-color: var(--brand-color);
+}
+
+.card__button {
+  padding: 0.75em 1.6em;
+  width: fit-content;
+  width: -moz-fit-content; /* Prefijo necesario para Firefox  */
+  font-variant: small-caps;
+  font-weight: bold;
+  border-radius: 0.45em;
+  border: none;
+  background-color: $color-main;
+  font-family: rgba(233, 180, 0, 0.5);
+  font-size: 1.125rem;
+  color: black;
+  cursor: pointer;
+}
+
+.card__button:focus {
+  outline: 2px solid black;
+  outline-offset: -5px;
+}
+
+@media (any-hover: hover) and (any-pointer: fine) {
+  .card__content {
+    transform: translateY(62%);
+    transition: transform 500ms ease-out;
+    transition-delay: 500ms;
+  }
+
+  .card__title::after {
+    opacity: 0;
+    transform: scaleX(0);
+    transition: opacity 1000ms ease-in, transform 500ms ease-out;
+    transition-delay: 500ms;
+    transform-origin: right;
+  }
+
+  .card__background {
+    transition: transform 500ms ease-in;
+  }
+
+  .card__content--container > :not(.card__title),
+  .card__button {
+    opacity: 0;
+    transition: transform 500ms ease-out, opacity 500ms ease-out;
+  }
+
+  .cardN:hover,
+  .cardN:focus-within {
+    transform: scale(1.05);
+    transition: transform 500ms ease-in;
+  }
+
+  .cardN:hover .card__content,
+  .cardN:focus-within .card__content {
+    transform: translateY(0);
+    transition: transform 250ms ease-in;
+  }
+
+  .cardN:focus-within .card__content {
+    transition-duration: 0ms;
+  }
+
+  .cardN:hover .card__background,
+  .cardN:focus-within .card__background {
+    transform: scale(1.3);
+  }
+
+  .cardN:hover .card__content--container > :not(.card__title),
+  .cardN:hover .card__button,
+  .cardN:focus-within .card__content--container > :not(.card__title),
+  .cardN:focus-within .card__button {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+    transition-delay: 400ms;
+  }
+
+  .cardN:hover .card__title::after,
+  .cardN:focus-within .card__title::after {
+    opacity: 1;
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: opacity 500ms ease-in, transform 500ms ease-in;
+    transition-delay: 500ms;
+  }
 }

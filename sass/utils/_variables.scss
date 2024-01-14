@@ -1,98 +1,111 @@
-    $color-main: rgba(233, 180, 0, 1);
-    $color-secondary: #757575;
-    $color-background-sections: rgb(47, 48, 58);
-    $color-text-main: #000000;
-    $color-text-light: #FFFFFF;
-    $color-secondary-back: #F5F4FA;
-    $color-active: #000000;
-    $color-border-head: #ECECEC;
-    $color-border-clients: #adb1b8;
-    $cubic: cubic-bezier(0.4, 0, 0.2, 1);
-    $svg--section: #AFB1B8;
-    $background-icon-foot: rgba(255, 255, 255, 0.1);
+$color-main: #e9b400;
+$color-secondary: #757575;
+$color-background-sections: #2f303a;
+$color-text-main: #000000;
+$color-text-light: #ffffff;
+$color-secondary-back: #f5f4fa;
+$color-active: #000000;
+$color-border-head: #ececec;
+$color-border-clients: #adb1b8;
+$cubic: cubic-bezier(0.4, 0, 0.2, 1);
+$svg--section: #afb1b8;
+$background-icon-foot: rgba(255, 255, 255, 0.1);
 
-    h1,h2,h3,h4,h5,h6,p{
-    margin: 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
 }
 
-html{
-    box-sizing: border-box;
+html {
+  box-sizing: border-box;
 }
 
-*,*::after,*::before{
-    box-sizing: inherit;
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
 }
 
-img{
-    display: block;
-    max-width: 100%;
-    height: auto;
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
-address{
-    font-style: normal;
+address {
+  font-style: normal;
 }
 
 .link {
-    text-decoration: none;
-    color: inherit;
-    color: $color-text-main;
-    transition: color 250ms $cubic;
+  text-decoration: none;
+  color: inherit;
+  color: $color-text-main;
+  transition: color 250ms $cubic;
 }
 
-.list{
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-    font-family: 'Roboto', "Arial", sans-serif;
-    color: $color-text-main;
-    text-decoration: none;
-    font-size: 14px;
-    letter-spacing: 0.03em;
+  font-family: 'Exo', 'Arial', sans-serif;
+  color: $color-text-main;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 0.03em;
 }
 
 .section {
-    padding-top: 60px;
-    padding-bottom: 60px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
-@media screen and (min-width: 1200px){
-.section {
+.flow > * + * {
+  margin-top: var(--flow-space, 1em);
+}
+
+@media screen and (min-width: 1200px) {
+  .section {
     padding-top: 94px;
     padding-bottom: 94px;
-}
+  }
 }
 
 svg:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 label {
-font-weight: 400;
-font-size: 12px;
-line-height: 14px;
-letter-spacing: 0.01em;
-color: $color-secondary;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: $color-secondary;
 }
 
 input {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .button {
-    cursor: pointer;
-    font-family: inherit;
-    border-style: none;
-    border-radius: 4px;
-    padding: 10px;
-    transition: color 250ms $cubic, background-color 250ms $cubic;
+  cursor: pointer;
+  font-family: inherit;
+  border-style: none;
+  border-radius: 4px;
+  padding: 10px;
+  transition: color 250ms $cubic, background-color 250ms $cubic;
 }
 
-.button:hover, .button:focus {
-    background-color: $color-main;
-    color: $color-text-light;
-    font-family: inherit;
+.button:hover,
+.button:focus {
+  background-color: $color-main;
+  color: $color-text-light;
+  font-family: inherit;
 }

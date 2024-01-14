@@ -1,13 +1,14 @@
 .header {
-padding-bottom: 60px;
- 
+  padding-bottom: 60px;
+  position: relative;
+  z-index: 2;
 
-    .header__container {
+  .header__container {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: auto;
-        
+
     .header__logo {
       display: flex;
       justify-content: center;
@@ -15,9 +16,7 @@ padding-bottom: 60px;
       margin: auto;
       width: 250px;
     }
-
-}
-
+  }
 }
 
 .header__nav {
@@ -26,7 +25,7 @@ padding-bottom: 60px;
   align-items: center;
   margin: auto;
 
-.header__nav__list {
+  .header__nav__list {
     color: $color-text-main;
     line-height: 1.1;
     font-weight: 500;
@@ -37,76 +36,81 @@ padding-bottom: 60px;
     padding-top: 20px;
     padding-bottom: 20px;
     position: relative;
-    
+
     .header__item {
-        
-        .header__link {
+      .header__link {
         padding-top: 20px;
         padding-bottom: 20px;
         position: relative;
-        transition: color 250ms $cubic;
-        
-    }
+        transition: all 300ms ease-in-out;
 
+        &:hover {
+          color: $color-text-light;
+          text-shadow: 1px 1px 2px rgb(25, 23, 23);
+        }
+      }
     }
-
   }
-
 }
 
 .header__icons {
-margin-left: 60px;
+  margin-left: 60px;
 
+  .header__icons-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
-.header__icons-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+    .header__icons-item {
+      margin-top: 10px;
+      flex-basis: calc((100% - 1px) / 3);
 
-.header__icons-item {
-  margin-top: 5px;
-flex-basis: calc((100% - 1px) / 3);
-}
-
-}
-
+      &:hover {
+        fill: white;
+      }
+    }
+  }
 }
 
 .header__contacts {
-    display: flex;
-    flex-direction: column;
-    margin-left: auto;
-    gap: 5px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    font-weight: 500;
-    
-    .header__contacts-item {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  gap: 5px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-weight: 500;
 
-        .header__contacts-link {
-        color: $color-secondary;
-        line-height: 1.1;
-        text-decoration: none;
-        transition: color 250ms $cubic;
+  .header__contacts-item {
+    .header__contacts-link {
+      color: $color-secondary;
+      line-height: 1.1;
+      text-decoration: none;
+      transition: all 250ms ease-in-out;
 
-        &:hover, &:focus {
-        color: $color-main;
-        }
-
-        }
-    
+      &:hover,
+      &:focus {
+        color: $color-text-light;
+      }
     }
+  }
+}
 
+.header__icon {
+  transition: all ease-in-out 250ms;
+
+  &:hover {
+    fill: white;
+  }
 }
 
 .header__container--border {
-    border-bottom: 1px solid $color-main;
+  border-bottom: 1px solid black;
 }
 
 .header__line-link {
-    
-    &:hover:after {
-    content: "";
+  &:hover:after {
+    content: '';
     background-color: $color-text-main;
     border-radius: 10px;
     width: 100%;
@@ -115,24 +119,26 @@ flex-basis: calc((100% - 1px) / 3);
     bottom: -1px;
     display: flex;
     justify-content: center;
-}
+  }
 }
 
 ::after {
-    transition: background-color 250ms $cubic;
+  transition: background-color 250ms $cubic;
 }
 
-.link:hover, .link:focus {
-color: $color-main;
-text-decoration: none;
+.link:hover,
+.link:focus {
+  text-decoration: none;
 }
 
-.mail-current:hover, .mail-current:focus {
-    fill: currentColor;
+.mail-current:hover,
+.mail-current:focus {
+  fill: currentColor;
 }
 
-.cell-current:hover, .cell-current:focus{
-    fill: currentColor;
+.cell-current:hover,
+.cell-current:focus {
+  fill: currentColor;
 }
 
 // .header__link--current {
@@ -152,7 +158,6 @@ text-decoration: none;
 // }
 // }
 
-
 // /* elemento menu */
 
 //  .menu {
@@ -171,7 +176,7 @@ text-decoration: none;
 // }
 
 // @media screen and (min-width: 768px) and (max-width: 1199px) {
-  
+
 // .header__contacts {
 //     display: flex;
 //     flex-wrap: wrap;
@@ -180,8 +185,8 @@ text-decoration: none;
 //     gap: 10px;
 //     padding-top: 24px;
 //     margin-left: 80px;
-//     padding-bottom: 21px; 
-   
+//     padding-bottom: 21px;
+
 // }
 
 // .header__link--current {
@@ -202,7 +207,7 @@ text-decoration: none;
 // }
 
 // .header__line-link {
-    
+
 //     &:hover:after {
 //     content: "";
 //     background-color: $color-main;
